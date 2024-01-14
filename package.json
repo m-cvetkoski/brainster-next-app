@@ -6,14 +6,15 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "docker-compose": "docker-compose up"
   },
   "dependencies": {
-    "@prisma/client": "^5.7.1",
-    "next": "14.0.4",
+    "@prisma/client": "^5.8.0",
+    "next": "^14.0.4",
     "prisma": "^5.7.1",
-    "react": "^18",
-    "react-dom": "^18",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
     "zod": "^3.22.4"
   },
   "devDependencies": {
