@@ -3,49 +3,6 @@ import routeHandler from "@/lib/routeHandler";
 import prisma from "@/lib/prisma";
 import Question from "@/schemas/Question";
 
-// export const DELETE = routeHandler(async (request, context) => {
-//   const { surveyId, questionId } = context.params;
-//   const response = await prisma.survey.update({
-//     where: {
-//       id: surveyId,
-//     },
-//     data: {
-//       questions: {
-//         delete: {
-//           id: questionId,
-//         },
-//       },
-//     },
-//     include: {
-//       questions: true,
-//     },
-//   });
-
-//   const questionToDelete = await prisma.question.findUniqueOrThrow({
-//     where: {
-//       id: questionId,
-//     },
-//   });
-
-//   const { questions } = response;
-
-//   if (questionToDelete.position < questions.length) {
-//     const { position } = questionToDelete;
-
-//     await prisma.question.updateMany({
-//       where: {
-//         id: { not: questionId },
-//         position: { gt: position },
-//       },
-//       data: {
-//         position: { decrement: 1 },
-//       },
-//     });
-//   }
-
-//   return response;
-// });
-
 export const DELETE = routeHandler(async (request, context) => {
   const { surveyId, questionId } = context.params;
 
